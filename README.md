@@ -25,6 +25,8 @@ provided.   `cv2.findChessboardCorners`   method is used to obtain image points.
 
 ![image-output1](./output_images/UndistortedImage.jpg)
 
+---
+
 Below is the example of distortion corrected image :
 
 ![image-output2](./output_images/Distortion_corrected_Image.jpg)
@@ -45,6 +47,7 @@ get the better result. Please look at the Cell 5. Following is the output image 
 
 ![image-output4](./output_images/perspective_transform.jpg)
 
+---
 I have used window slide method to get the left and right pints on the images. For that I have
 used same histogram and convolution method to get the pixels within the window. 9 windows with
 the height of 80 are used to get the result on image of size 720. Initial points are resulted from
@@ -59,11 +62,13 @@ curvature.Radius is smoothed using weighted average over the last frame. Ployfit
 is used to get the updated polynomial(scaled for real word measurments ie. Converted from the
 pixel to meters).
 
+---
 As explained in the Cell 9, lines are plotted on the image, unwarped it and overlayed with
 the original image. Radius of curvature and offset are plotted as shown in the Cell 11.
 
 ![image-output6](./output_images/offset_curvature_plot.jpg)
 
+---
 Likely failure of the code.
 I think I have to iterate more with the color thresholds. Right now its not optimum (as you can
 observe in the example image)and give bad results with the different type of the enviornmental
